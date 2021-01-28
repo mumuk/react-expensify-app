@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
     mode: env.production ? 'production' : 'development',
     entry: './src/app.js',
     output: {
-      path: path.join(__dirname, 'public'),
+      path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js'
     },
     plugins: [CSSExtract],
@@ -42,6 +42,7 @@ module.exports = (env, argv) => {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true,
       watchContentBase: true,
+      publicPath:'/dist/'
     }
   }
 };
