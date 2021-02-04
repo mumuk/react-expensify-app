@@ -9,6 +9,7 @@ import {Provider} from "react-redux";
 import "react-dates/lib/css/_datepicker.css"
 import 'react-dates/initialize';
 import "./firebase/firebase";
+import {startSetExpenses} from "./actions/expenses";
 
 const store = configureStore();
 
@@ -20,7 +21,13 @@ const jsx = (
 );
 
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+store.dispatch(startSetExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById('app'));
+});
+
+
 
 
 
