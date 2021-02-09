@@ -1,5 +1,4 @@
 import firebase from "firebase/app";
-import expArr from '../tests/fixtures/expenses'
 
 require('firebase/auth');
 require('firebase/database');
@@ -15,8 +14,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-
-export {firebase, database as default}
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+export {firebase, googleAuthProvider, database as default}
 
 
 // const collection = 'users';
