@@ -1,0 +1,18 @@
+@use "../base/settings" as s;
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: s.$m-size;
+  @media (min-width: s.$desktop-breakpoint) {
+    flex-direction: row;
+    margin-bottom: s.$l-size;
+  }
+}
+
+.input-group__item {
+  margin-bottom: s.$s-size;
+  @media (min-width: s.$desktop-breakpoint) {
+    margin: 0 s.$s-size 0 0;
+  }
+}

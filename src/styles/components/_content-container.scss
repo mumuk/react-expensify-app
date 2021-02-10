@@ -1,0 +1,6 @@
+@use "../base/settings"as s;
+.content-container {
+  margin: 0 auto;
+  padding: 0 s.$m-size;
+  max-width: 80rem;
+}

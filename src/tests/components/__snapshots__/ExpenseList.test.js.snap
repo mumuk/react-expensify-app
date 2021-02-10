@@ -1,18 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseList with empty message 1`] = `
-<div>
-  <p>
-    No expenses added!
-  </p>
-  <h1>
-    Expense List
-  </h1>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  />
+  <div
+    className="list-item list-item--message"
+  >
+    <span>
+      No expenses
+    </span>
+  </div>
 </div>
 `;
 
 exports[`should render ExpenseList with expenses 1`] = `
-<div>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  />
   <Connect(ExpenseListItem)
     amount={350}
     createdAt={0}
@@ -37,8 +86,5 @@ exports[`should render ExpenseList with expenses 1`] = `
     key="23"
     note=""
   />
-  <h1>
-    Expense List
-  </h1>
 </div>
 `;

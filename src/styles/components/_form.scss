@@ -1,0 +1,13 @@
+@use "../base/settings" as s;
+.form {
+  display: flex;
+  flex-direction: column;
+  >* {
+    margin-bottom: s.$m-size;
+  }
+}
+
+.form__error {
+  margin: 0 0 s.$m-size 0;
+  font-style: italic;
+}

@@ -1,0 +1,64 @@
+@use "../base/settings" as s;
+.list-header {
+  background: s.$off-white;
+  border: 1px solid darken(s.$off-white, 7%);
+  color: s.$grey;
+  display: flex;
+  justify-content: space-between;
+  padding: s.$s-size s.$m-size;
+}
+
+.list-body {
+  margin-bottom: s.$m-size;
+  @media (min-width: s.$desktop-breakpoint) {
+    margin-bottom: s.$l-size;
+  }
+}
+
+.list-item {
+  border: 1px solid darken(s.$off-white, 7%);
+  border-top: none;
+  color: s.$dark-grey;
+  display: flex;
+  flex-direction: column;
+  padding: s.$s-size;
+  text-decoration: none;
+  transition: background .3s ease;
+  &:hover {
+    background: s.$off-white;
+  }
+  @media (min-width: s.$desktop-breakpoint) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: s.$m-size;
+  }
+}
+
+.list-item--message {
+  align-items: center;
+  color: s.$grey;
+  justify-content: center;
+  padding: s.$m-size;
+  &:hover {
+    background: none;
+  }
+}
+
+.list-item__title {
+  margin: 0;
+  word-break: break-all;
+}
+
+.list-item__sub-title {
+  color: s.$grey;
+  font-size: s.$font-size-small;
+}
+
+.list-item__data {
+  margin: s.$s-size 0 0 0;
+  @media (min-width: s.$desktop-breakpoint) {
+    margin: 0;
+    padding-left: s.$s-size;
+  }
+}
